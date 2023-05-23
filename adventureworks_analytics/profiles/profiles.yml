@@ -1,0 +1,13 @@
+adventureworks_analytics:
+  target: dev
+  outputs:
+    dev:
+      account: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_ACC') }}"
+      database: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_DB') }}"
+      password: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_PASS') }}"
+      role: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_ROLE') }}"
+      schema: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_SCHEMA') }}"
+      threads: 1
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_USER') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_WAREHOUSE') }}"
