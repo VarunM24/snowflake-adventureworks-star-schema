@@ -33,5 +33,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   adventureworks_analytics:
     # Config indicated by + and applies to all files under models/example/
+    mart:
+        +materialized: view
+        schema: mart
+    martx:
+      dim:
+          +materialized: table
+          schema: martx
+      fact:
+          +materialized: table # should normally be incremental
+          schema: martx
+    staging:        
+      stg_views:
+        +materialized: view
+        schema: stg
+      
     example:
       +materialized: view

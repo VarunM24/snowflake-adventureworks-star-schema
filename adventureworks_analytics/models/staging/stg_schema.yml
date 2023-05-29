@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: "raw" # this is the source_name
+    schema: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_SCHEMA','ADVENTUREWORKS') }}_raw"
+    database: "{{ env_var('SNOWFLAKE_DBT_ADVENTUREWORKS_ANALYTICS_DB','ADVENTUREWORKS_ANALYTICS') }}"
+    tables:
+      - name: address # this is the table_name
+      - name: countryregion
+      - name: creditcard # this is the table_name
+      - name: customer
+      - name: date # this is the table_name
+      - name: person
+      - name: product # this is the table_name
+      - name: productcategory
+      - name: productsubcategory # this is the table_name
+      - name: salesorderdetail
+      - name: salesorderheader # this is the table_name
+      - name: salesorderheadersalesreason
+      - name: salesreason # this is the table_name
+      - name: stateprovince
+      - name: store # this is the table_name
